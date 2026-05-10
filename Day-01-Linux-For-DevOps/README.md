@@ -1,53 +1,64 @@
 # Day 01 - Linux For DevOps
 
-Welcome to Day 01 of your DevOps journey! In this session, we focused on the fundamental concepts that form the backbone of any DevOps process: **Linux Basics**. Understanding Linux is crucial because most DevOps tools and services run on Linux-based systems.
+Today I started my DevOps learning journey with Linux fundamentals.  
+The main focus was to understand how Linux works, why it is important in DevOps, and how basic commands are used in real server environments.
 
-## Topics Covered:
+## Topics Covered
 
-### 1. **Operating System Basics**
-   - We began by understanding what an Operating System (OS) is, its role in managing hardware and software resources, and how it acts as an interface between the user and computer hardware.
+### 1. Operating System Basics
+- Learned what an Operating System is.
+- Understood how OS manages hardware, software, memory, files, and processes.
+- Learned that OS acts as a bridge between user and computer hardware.
 
-   ### 2. **Client OS vs Server OS**
-      - Explored the differences between Client OS (e.g., Windows, macOS) and Server OS (e.g., Linux, Windows Server), focusing on the optimizations and configurations for running on servers.
+### 2. Client OS vs Server OS
+- Client OS is used by normal users for daily tasks.
+- Server OS is used to run services, applications, websites, databases, and production workloads.
+- In DevOps, Linux Server OS is very important because most cloud servers run on Linux.
 
-      ### 3. **Linux OS**
-         - Delved into **Linux OS**, its architecture, and why it's preferred in the DevOps world for its flexibility, stability, and command-line capabilities.
+### 3. Linux OS
+- Learned why Linux is widely used in DevOps.
+- Linux is stable, secure, lightweight, and powerful for servers.
+- Most DevOps tools work very well with Linux-based systems.
 
-         ### 4. **Linux Filesystem**
-            - We learned about the Linux filesystem hierarchy, from the root directory `/` to the essential directories like `/etc`, `/bin`, and `/var`. Understanding this structure is key to navigating and managing Linux systems.
+### 4. Linux Filesystem
+- Learned that everything in Linux is treated as a file or directory.
+- Explored important directories like `/`, `/etc`, `/bin`, `/sbin`, `/mnt`, and `/var`.
+- Understood that `/var/www/html` is commonly used to store default web files for NGINX.
 
-            ### 5. **Basic Linux Commands**
-               - Hands-on practice with the most common Linux commands like:
-                    - **`ls`**: Listing files and directories.
-                         - **`cd`**: Navigating between directories.
-                              - **`rmdir`** and **`rm -r`**: Removing directories and files.
-                                   - **`sudo`**: Gaining administrative privileges.
-                                        - **`systemctl`**: Managing services like Nginx.
-                                             - **`apt update`** and **`apt upgrade`**: Managing system packages.
+### 5. Basic Linux Commands
+Practiced basic Linux commands:
 
-                                             ### 6. **Vim Basics**
-                                                - We also covered the **Vim** text editor, learning basic commands to navigate and edit files in the terminal, making it an essential tool for system administration.
+- `ls` - list files and directories
+- `cd` - change directory
+- `rmdir` - remove empty directory
+- `rm -r` - remove directory with files
+- `sudo` - run command with admin/root permissions
+- `apt update` - update package information
+- `apt upgrade` - upgrade installed packages
+- `systemctl` - manage system services
 
-                                                ### 7. **NGINX Server Basics**
-                                                   - Finally, we got hands-on with the **NGINX web server**. We learned how to manage NGINX using commands like **`systemctl`** to start, stop, and check the status of the service.
+### 6. Vim Basics
+- Learned that Vim is a terminal-based text editor.
+- Used `i` to enter insert mode.
+- Used `Esc` to exit insert mode.
+- Used `:wq` to save and quit.
 
-                                                   ## What I Learned:
-                                                   - **Linux OS** and its directory structure are the core of most DevOps tools.
-                                                   - **Vim** is a powerful editor that allows you to quickly edit files from the terminal.
-                                                   - **NGINX** is not only a web server but also a reverse proxy server, essential for hosting websites and applications.
+### 7. NGINX Basics
+- Learned that NGINX is a web server and reverse proxy server.
+- Checked NGINX service using `systemctl`.
+- Edited the default NGINX web page using Vim.
 
-                                                   ## Practical Work:
-                                                   - I edited the **NGINX default page** by modifying the **index.html** file located in **/var/www/html**.
+## Commands Practiced
 
-                                                   ## Mistakes/Confusions:
-                                                   - At first, I confused **`apt update`** with **`apt upgrade`**. The former updates package information, while the latter actually upgrades the installed packages.
-                                                   - I also faced some permission issues when trying to modify system files, but learned how to solve them using **`sudo`**.
-
-                                                   ## Key Takeaway:
-                                                   The foundation of **Linux** is crucial for **DevOps**. By understanding the system's inner workings, we can efficiently troubleshoot, manage services, and deploy applications on Linux-based servers.
-
-                                                   ---
-
-                                                   ## Looking Forward:
-                                                   In the next sessions, we'll dive deeper into **automation tools**, **Docker**, **CI/CD**, and **cloud infrastructure** to take this foundation to the next level!
-
+```bash
+ls
+cd /var
+cd /var/www/html
+rmdir foldername
+rm -r foldername
+sudo apt update
+sudo apt upgrade
+sudo systemctl status nginx
+sudo systemctl stop nginx
+sudo systemctl restart nginx
+sudo vim index.html
